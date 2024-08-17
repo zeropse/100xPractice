@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+body{
+    background-color: #151515;
+    color: white;
+    font-family: Poppins, Arial, Helvetica, sans-serif;
+}
+
+header{
+    margin-top: 18px;
+    font-size: 16px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+header img{
+    padding-right: 5px;
+}
+
+header .name{
+    font-size: 18px;
+    cursor: pointer;
+}
+
+header .links{
+    cursor: pointer;
+    color: #9ba3b4;
+    display: flex;
+    gap: 20px;
+}
+
+header .searchbtn{
+    padding-left: 80px;
+}
+
+header .searchbtn input{
+    font-size: 18px;
+    background-color: #151515;
+    border: 0.5px ridge #9ba3b4;
+    color: #9ba3b4;
+    border-radius: 2px;
+}
+
+header .searchbtn button{
+    border: none;
+    color: white;
+    background-color: #0078d4;
+    font-size: 18px;
+    padding: 4px;
+    padding-left: 8px;
+    padding-right: 8px;
+    border-radius: 5px;
+    margin-left: 5px;
+}
+
+header .searchbtn button:hover{
+    opacity: .9;
+    cursor: pointer;
+}
+
+.info{
+    margin-top: 20px;
+    text-align: center;
+}
+
+.info a{
+    color: #0078d4;
+}
+
+.info span{
+    color: #9ba3b4;
+}
+
+.details{
+    margin-top: 80px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.left{
+    padding-left: 100px;
+}
+
+.right{
+    padding-right: 100px;
+}
+
+.btninfo {
+    border: none;
+    background-color: #9ba3b4;
+    color: #152954;
+    border-radius: 20px;
+    padding: 8px;
+}
+
+.download{
+    border: none;
+    background-color: #0078d4;
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.download:hover{
+    opacity: .9;
+    cursor: pointer;
+}
+
+h1{
+    font-size: 56px;
+    max-width: 55px;
+}
+
+.editions{
+    margin-top: 10px;
+}
+
+.editions a{
+    color: #0078d4;
+    font-size: 15px;
+}   
+
+.editions span{
+    color: #787474;
+}
+
+.agreement p{
+    font-size: 10px;
+    color: #787474;
+}
+
+.agreement a{
+    color: #0078d4;
+}
