@@ -1,0 +1,57 @@
+body {
+    background-color: #9f9f9f;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+#toDoList li {
+    margin: 10px; 
+    padding: 5px;
+}
+
+.toDoList {
+    width: 50%;
+    margin: 0 auto;
+}
+
+#rmvbtn {
+    border: none;
+    background-color: #ff4d4d;
+    color: white;
+    cursor: pointer;
+    font-size: 12px;
+    padding: 3px 8px;
+    margin-left: 10px;
+}
+
+#rmvbtn:hover {
+    background-color: #cc0000;
+}
+
+.submit {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#input {
+    padding: 10px;
+    width: 50%;
+}
+
+#addbtn {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+#addbtn:hover {
+    background-color: #45a049;
+} 
