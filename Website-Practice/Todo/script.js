@@ -1,15 +1,43 @@
-function addTodo() {
-  const input = document.getElementById("input");
-  const todoList = document.getElementById("toDoList");
+let todos = [];
 
-  if (input.value) {
-    const newTodo = document.createElement("li");
-    newTodo.innerHTML = `${input.value} <button type="button" id="rmvbtn" onclick="remove(this)">&#10005</button>`;
-    todoList.appendChild(newTodo);
+function addTodo() {
+  const todoText = document.getElementById("input").value.trim();
+  if (todoText !== "") {
+    todos.push({
+      title: todoText,
+    });
+    document.getElementById("input").value = "";
+  } else {
+    alert("Please enter an input!");
   }
+  render();
 }
 
-function remove(button) {
-  const todoList = document.getElementById("toDoList");
-  todoList.removeChild(button.parentElement);
+function deleteTodo(index) {
+  todos.splice(index, 1);
+  render();
+}
+
+function render() {
+  const mainList = document.querySelector(".mainList");
+  mainList.innerHTML = "";
+
+  todos.forEach((todo, index) => {
+    const todoItem = document.createElement("div");
+    todoItem.className = "todo-item";
+
+    const todoSpan = document.createElement("span");
+    todoSpan.className = "todo-span";
+    todoSpan.textContent = todo.title;
+
+    const button = document.createElement("button");
+    button.innerHTML = "&#10005";
+    button.className = "delete-btn";
+    button.setAttribute("type", "button");
+    button.setAttribute("onclick", `deleteTodo(${index})`);
+
+    todoItem.appendChild(todoSpan);
+    todoItem.appendChild(button);
+    mainList.appendChild(todoItem);
+  });
 }

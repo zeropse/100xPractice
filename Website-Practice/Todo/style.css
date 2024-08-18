@@ -7,31 +7,47 @@ body {
 
 h1 {
     text-align: center;
-    color: #333;
+    color: #000000;
+    margin-top: 20px;
 }
 
-#toDoList li {
-    margin: 10px; 
-    padding: 5px;
-}
-
-.toDoList {
+.mainList {
     width: 50%;
-    margin: 0 auto;
+    margin: 20px auto;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px #000000;
 }
 
-#rmvbtn {
+.delete-btn {
     border: none;
-    background-color: #ff4d4d;
-    color: white;
+    background-color: #e85959;
     cursor: pointer;
-    font-size: 12px;
-    padding: 3px 8px;
-    margin-left: 10px;
+    font-size: 14px;
+    padding: 5px 10px;
+    border-radius: 3px;
+    transition: background-color 0.3s ease;
 }
 
-#rmvbtn:hover {
-    background-color: #cc0000;
+.delete-btn:hover {
+    background-color: #ff0000;
+    cursor: pointer;
+}
+
+#clearbtn {
+    padding: 10px 20px;
+    background-color: #e85959;
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px #000000;
+    margin-left: 5px;
+}
+
+#clearbtn:hover {
+    background-color: #ff0000;
+    cursor: pointer;
 }
 
 .submit {
@@ -41,17 +57,35 @@ h1 {
 
 #input {
     padding: 10px;
-    width: 50%;
+    width: 33.5%;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px #000000;
 }
 
 #addbtn {
     padding: 10px 20px;
     background-color: #4CAF50;
-    color: white;
+    color: rgb(0, 0, 0);
     border: none;
-    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px #000000;
 }
 
 #addbtn:hover {
     background-color: #45a049;
+    cursor: pointer;
+}
+
+.todo-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.todo-span {
+    text-align: left;
+    padding-right: 15px;
 }
