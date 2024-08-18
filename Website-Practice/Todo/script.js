@@ -18,6 +18,12 @@ function deleteTodo(index) {
   render();
 }
 
+function clear() {
+  const mainList = document.querySelector(".mainList");
+  mainList.innerHTML = "";
+  console.log(mainList);
+}
+
 function render() {
   const mainList = document.querySelector(".mainList");
   mainList.innerHTML = "";
