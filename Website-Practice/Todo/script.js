@@ -6,7 +6,7 @@ function addTodo() {
   if (todoText !== "") {
     todoNumber++; 
     todos.push({
-      title: `${todoNumber}. ${todoText}`,
+      title: todoText,
     });
     document.getElementById("input").value = "";
     console.log(`Todo #${todoNumber} Added!!`);

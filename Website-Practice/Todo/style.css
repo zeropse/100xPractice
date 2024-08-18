@@ -35,21 +35,6 @@ h1 {
     cursor: pointer;
 }
 
-#clearbtn {
-    padding: 10px 20px;
-    background-color: #e85959;
-    color: rgb(0, 0, 0);
-    border: none;
-    border-radius: 5px;
-    box-shadow: 0px 0px 10px #000000;
-    margin-left: 5px;
-}
-
-#clearbtn:hover {
-    background-color: #ff0000;
-    cursor: pointer;
-}
-
 .submit {
     text-align: center;
     margin-top: 20px;
@@ -71,10 +56,27 @@ h1 {
     border: none;
     border-radius: 5px;
     box-shadow: 0px 0px 10px #000000;
+    transition: background-color 0.3s ease;
 }
 
 #addbtn:hover {
     background-color: #45a049;
+    cursor: pointer;
+}
+
+#clearbtn {
+    padding: 10px 20px;
+    background-color: #e85959;
+    color: rgb(0, 0, 0);
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px #000000;
+    margin-left: 5px;
+    transition: background-color 0.3s ease;
+}
+
+#clearbtn:hover {
+    background-color: #ff0000;
     cursor: pointer;
 }
 
