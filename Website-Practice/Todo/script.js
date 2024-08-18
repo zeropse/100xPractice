@@ -1,14 +1,17 @@
 let todos = [];
+let todoNumber = 0;
 
 function addTodo() {
   const todoText = document.getElementById("input").value.trim();
   if (todoText !== "") {
+    todoNumber++; 
     todos.push({
-      title: todoText,
+      title: `${todoNumber}. ${todoText}`,
     });
     document.getElementById("input").value = "";
+    console.log(`Todo #${todoNumber} Added!!`);
   } else {
-    alert("Please enter an input!");
+    alert("Please enter an input!!!");
   }
   render();
 }
@@ -16,12 +19,13 @@ function addTodo() {
 function deleteTodo(index) {
   todos.splice(index, 1);
   render();
+  console.log("Todo Deleted!!");
 }
 
-function clear() {
+function clearTodo() {
   const mainList = document.querySelector(".mainList");
   mainList.innerHTML = "";
-  console.log(mainList);
+  console.log("Todo List Cleared!!")
 }
 
 function render() {
