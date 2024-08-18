@@ -1,0 +1,44 @@
+<body>
+  <input type="text" id="todoInput" />
+  <button onclick="addTodo()">Add todo!</button>
+  <button onclick="deleteTodo()">Delete todo!</button>
+
+  <div id="todoList"></div>
+
+  <script>
+    let todos = [];
+
+    function addTodo() {
+      const todoText = document.getElementById("todoInput").value;
+      if (todoText !== "") {
+        todos.push({
+          title: todoText,
+        });
+        document.getElementById("todoInput").value = "";
+      } else {
+        alert("Please Enter an input!!");
+      }
+      render();
+    }
+
+    function deleteTodo() {
+      if (todos.length > 0) {
+        todos.splice(todos.length - 1, 1);
+      }
+      render();
+    }
+
+    function render() {
+      const todoList = document.getElementById("todoList");
+      todoList.innerHTML = "";
+
+      todos.forEach((todo) => {
+        const div = document.createElement("div");
+        const span = document.createElement("span");
+        span.textContent = todo.title;
+        div.appendChild(span);
+        todoList.appendChild(div);
+      });
+    }
+  </script>
+</body>
