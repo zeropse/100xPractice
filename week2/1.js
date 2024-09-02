@@ -24,12 +24,26 @@
 
 
 
-function setTimeoutPromisified(ms) {
-    return new Promise(resolve => setTimeout(resolve, ms));
+// function setTimeoutPromisified(ms) {
+//    return new Promise(resolve => setTimeout(resolve, ms));
+// }
+
+// function callback() {
+//     console.log("3 seconds have passed");
+// }
+
+// // setTimeoutPromisified(3000).then(callback);  
+
+// let p = setTimeoutPromisified(3000);
+// console.log(p)
+
+
+function wait2sec(resolve) {
+    setTimeout(resolve, 2000);
 }
 
-function callback() {
-    console.log("3 seconds have passed");
+function greet(){
+    console.log("Hello");
 }
 
-setTimeoutPromisified(3000).then(callback)   
+wait2sec(greet);
